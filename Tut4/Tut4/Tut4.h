@@ -9,13 +9,16 @@
 #else
 #define TUT4_API __declspec(dllimport)
 #endif
-
 // This class is exported from the Tut4.dll
 class TUT4_API CTut4 {
+	int value;
+	
+	CTut4* Next;
 public:
+	CTut4 *first;
 	CTut4(void);
 	void push(int);
-	int pop();
+	void pop();
 	void isFull();
 	void isEmpty();
 	int peek();
